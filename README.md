@@ -7,13 +7,13 @@ statistics-with-aimp3
 Версия AIMP3: 3.60, build 1470
 
 
-### Этот скрипт работает вместе с [audio.getPopular downloads.py](https://github.com/gil9red/SimplePyScripts/blob/master/vk_api/audio.getPopular%20downloads.py). ###
+#### Этот скрипт работает вместе с [audio.getPopular downloads.py](https://github.com/gil9red/SimplePyScripts/blob/master/vk_api/audio.getPopular%20downloads.py). ####
 
 [audio.getPopular downloads.py](https://github.com/gil9red/SimplePyScripts/blob/master/vk_api/audio.getPopular%20downloads.py) скачивает музыку по жанрам -- для каждого жанра своя папка. После эти папки добавил в один плейлист AIMP3. Скрипт парсит файл плейлиста aimppl и выясняет процент отключенных
 песен и их жанр (смотрит в папку).
 
 
-### Лог работы: ###
+#### Лог работы: ####
 
 ```
 C:\Python34\pythonw.exe C:/Users/ipetrash/Desktop/PyScripts/statistics-with-aimp3/main.py
