@@ -89,5 +89,22 @@ if __name__ == '__main__':
     print()
     print('Черный список ({}):'.format(len(black_list)))
     # Сортируем по имени файла
-    for i, audio in enumerate(sorted(black_list, key=lambda x: os.path.split(x)[-1]), 1):
-        print('{}. {}: {}'.format(i, os.path.split(audio)[-1], audio))
+    sorted_black_list = sorted(black_list, key=lambda x: os.path.split(x)[-1])
+
+    # Чтобы показать первые 5 и последнии 3 записи из черного списка
+    size_black_list = len(sorted_black_list)
+
+    # Если размер небольшой, показывать "огрызки" нет смысла
+    if size_black_list > 15:
+        for i, audio in enumerate(sorted_black_list[:5], 1):
+            print('{}. {}: {}'.format(i, os.path.split(audio)[-1], audio))
+
+        print('...')
+        show_last_audio = size_black_list - 3
+
+        for i, audio in enumerate(sorted_black_list[show_last_audio:], show_last_audio + 1):
+            print('{}. {}: {}'.format(i, os.path.split(audio)[-1], audio))
+
+    else:
+        for i, audio in enumerate(sorted_black_list, 1):
+            print('{}. {}: {}'.format(i, os.path.split(audio)[-1], audio))
